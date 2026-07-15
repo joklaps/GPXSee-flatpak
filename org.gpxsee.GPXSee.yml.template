@@ -1,0 +1,27 @@
+app-id: org.gpxsee.GPXSee
+runtime: org.kde.Platform
+runtime-version: "6.10"
+sdk: org.kde.Sdk
+command: gpxsee
+finish-args:
+  - --device=dri
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --share=network
+  - --filesystem=home
+rename-desktop-file: gpxsee.desktop
+rename-icon: gpxsee
+rename-mime-file: gpxsee.xml
+rename-appdata-file: gpxsee.appdata.xml
+modules:
+  - name: gpxsee
+    buildsystem: qmake
+    post-install:
+      - lrelease gpxsee.pro
+    sources:
+      - type: archive
+        url: @URL@
+        sha256: @SHA256@
+      - type: patch
+        path: gpxsee-appdata.patch

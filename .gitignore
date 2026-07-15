@@ -1,0 +1,8 @@
+.flatpak-builder/
+build-dir/
+build.log
+repo/
+tools/binary_addons_repo_tmp
+.env
+dist/*
+!dist/builds

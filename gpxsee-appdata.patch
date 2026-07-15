@@ -1,0 +1,142 @@
+--- GPXSee-16.11/pkg/linux/gpxsee.appdata.xml
++++ GPXSee-16.11/pkg/linux/gpxsee.appdata.xml
+@@ -1,12 +1,16 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<component type="desktop">
+-	<id>gpxsee.desktop</id>
++<?xml version="1.0" encoding="UTF-8" ?>
++<component type="desktop-application">
++	<id>org.gpxsee.GPXSee</id>
++	<developer id="io.github.tumic0">
++		<name>Martin Tůma</name>
++	</developer>
+ 	<metadata_license>MIT</metadata_license>
+ 	<project_license>GPL-3.0</project_license>
+ 
+ 	<name>GPXSee</name>
+ 	<summary>GPS log file viewer and analyzer</summary>
+ 	<description>
++		<p>**This is a community-built package of GPXSee. It is not an official package and is not supported by the author of GPXSee. Please do not contact the GPXSee author for support regarding this Flatpak package.**</p>
+ 		<p>GPXSee is a GPS log file viewer and analyzer that supports all common
+ 		GPS log file formats.</p>
+ 
+@@ -43,88 +47,50 @@
+ 	<screenshots>
+ 		<screenshot type="default">
+ 			<image>https://www.gpxsee.org/gallery/linux.png</image>
++			<caption>Main window showing a track on the map</caption>
+ 		</screenshot>
+ 		<screenshot>
+ 			<image>https://www.gpxsee.org/gallery/gear_ratio.png</image>
++			<caption>Gear ratio graph</caption>
+ 		</screenshot>
+ 	</screenshots>
+ 
+ 	<categories>
+-		<category>Graphics</category>
+-		<category>Viewer</category>
+-		<category>Maps</category>
+-		<category>Geoscience</category>
+-		<category>Geography</category>
+-		<category>DataVisualization</category>
++		<category>Utility</category>
+ 	</categories>
+ 
+-	<url type="homepage">https://www.gpxsee.org</url>
+-
+ 	<launchable type="desktop-id">gpxsee.desktop</launchable>
+ 
+ 	<provides>
+ 		<binary>gpxsee</binary>
+ 	</provides>
+ 
+-	<mimetypes>
+-		<mimetype>application/gpx+xml</mimetype>
+-		<mimetype>application/vnd.garmin.tcx+xml</mimetype>
+-		<mimetype>application/vnd.ant.fit</mimetype>
+-		<mimetype>application/vnd.google-earth.kml+xml</mimetype>
+-		<mimetype>application/vnd.fai.igc</mimetype>
+-		<mimetype>application/vnd.nmea.nmea</mimetype>
+-		<mimetype>application/vnd.oziexplorer.plt</mimetype>
+-		<mimetype>application/vnd.oziexplorer.rte</mimetype>
+-		<mimetype>application/vnd.oziexplorer.wpt</mimetype>
+-		<mimetype>application/vnd.groundspeak.loc+xml</mimetype>
+-		<mimetype>application/vnd.sigma.slf+xml</mimetype>
+-		<mimetype>application/geo+json</mimetype>
+-		<mimetype>application/vnd.naviter.seeyou.cup</mimetype>
+-		<mimetype>application/vnd.garmin.gpi</mimetype>
+-		<mimetype>application/vnd.suunto.sml+xml</mimetype>
+-		<mimetype>image/jpeg</mimetype>
+-		<mimetype>text/csv</mimetype>
+-		<mimetype>application/vnd.garmin.img</mimetype>
+-		<mimetype>application/vnd.garmin.jnx</mimetype>
+-		<mimetype>application/vnd.garmin.gmap+xml</mimetype>
+-		<mimetype>image/vnd.maptech.kap</mimetype>
+-		<mimetype>application/vnd.oziexplorer.map</mimetype>
+-		<mimetype>application/vnd.mapbox.mbtiles</mimetype>
+-		<mimetype>application/vnd.twonav.rmap</mimetype>
+-		<mimetype>application/vnd.trekbuddy.tba</mimetype>
+-		<mimetype>application/vnd.gpxsee.map+xml</mimetype>
+-		<mimetype>application/x-tar</mimetype>
+-		<mimetype>image/tiff</mimetype>
+-		<mimetype>application/vnd.google-earth.kmz</mimetype>
+-		<mimetype>application/vnd.alpinequest.aqm</mimetype>
+-		<mimetype>application/vnd.rmaps.sqlite</mimetype>
+-		<mimetype>application/vnd.osmdroid.sqlite</mimetype>
+-		<mimetype>application/vnd.mapsforge.map</mimetype>
+-		<mimetype>application/vnd.tomtom.ov2</mimetype>
+-		<mimetype>application/vnd.tomtom.itn</mimetype>
+-		<mimetype>application/vnd.esri.wld</mimetype>
+-		<mimetype>application/vnd.onmove.omd</mimetype>
+-		<mimetype>application/vnd.onmove.ghp</mimetype>
+-		<mimetype>application/vnd.memory-map.qct</mimetype>
+-		<mimetype>application/vnd.twonav.trk</mimetype>
+-		<mimetype>application/vnd.twonav.rte</mimetype>
+-		<mimetype>application/vnd.twonav.wpt</mimetype>
+-		<mimetype>application/vnd.cgtk.gemf</mimetype>
+-		<mimetype>application/vnd.orux.map+xml</mimetype>
+-		<mimetype>application/vnd.iho.s57-data</mimetype>
+-		<mimetype>application/vnd.iho.s57-catalogue</mimetype>
+-		<mimetype>application/vnd.gpsdump.wpt</mimetype>
+-		<mimetype>application/vnd.gpstuner.gmi</mimetype>
+-		<mimetype>application/vnd.70mai.txt</mimetype>
+-		<mimetype>application/vnd.velocitek.vtk</mimetype>
+-		<mimetype>application/vnd.vakaros.vkx</mimetype>
+-		<mimetype>application/vnd.coros.csa</mimetype>
+-		<mimetype>application/vnd.coros.pma</mimetype>
+-		<mimetype>application/vnd.pmtiles</mimetype>
+-		<mimetype>application/mp4</mimetype>
+-		<mimetype>application/x-subrip</mimetype>
+-		<mimetype>video/mp4</mimetype>
+-		<mimetype>video/quicktime</mimetype>
+-		<mimetype>x-scheme-handler/geo</mimetype>
+-	</mimetypes>
++	<keywords>
++		<keyword>gpx</keyword>
++		<keyword>tcx</keyword>
++		<keyword>fit</keyword>
++		<keyword>kml</keyword>
++		<keyword>map</keyword>
++		<keyword>maps</keyword>
++		<keyword>gps</keyword>
++	</keywords>
++
++	<url type="homepage">https://www.gpxsee.org</url>
++	<url type="contribute">https://github.com/tumic0/GPXSee</url>
++	<url type="translate">https://hosted.weblate.org/projects/gpxsee/translations/</url>
++
++	<content_rating type="oars-1.1"/>
++
++	<releases>
++		<release version="16.11" date="2026-07-04">
++			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.11</url>
++			<description>
++			<p>Changes</p>
++				<ul>
++				<li>Removed Qt-private dependency.</li>
++				<li>Improved KMZ files loading.</li>
++				</ul>
++			</description>
++		</release>
++	</releases>
+ </component>

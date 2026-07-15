@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPXSee Flatpak Downloads</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #dcdcdc;
+    --card-bg: #f6f6f7;
+    --code-bg: #eef0f2;
+    --accent: #2f6f4f;
+    --accent-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #e8e8e8;
+      --muted: #a3a3a3;
+      --border: #33363c;
+      --card-bg: #1d2024;
+      --code-bg: #202327;
+      --accent: #5fbf8f;
+      --accent-fg: #0e1a14;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.55;
+  }
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.25rem;
+  }
+  .tagline {
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
+  }
+  p { max-width: 65ch; }
+  code, pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+  }
+  code {
+    background: var(--code-bg);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+  }
+  pre {
+    background: var(--code-bg);
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  pre code {
+    background: none;
+    padding: 0;
+  }
+  ol, ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.4rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.6rem 0.7rem;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--accent-fg);
+    text-decoration: none;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .btn:hover { opacity: 0.88; }
+  .note {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin-top: 1rem;
+  }
+  .note p:first-child { margin-top: 0; }
+  .note p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>GPXSee Flatpak</h1>
+  <p class="tagline">Unofficial Flatpak bundles for <a href="https://github.com/tumic0/GPXSee">GPXSee</a>, the GPS log file viewer and analyzer.</p>
+
+  <h2>What is this?</h2>
+  <p>
+    This page distributes standalone Flatpak bundles of GPXSee, built from the manifest in
+    this repository (<a href="https://github.com/joklaps/GPXSee-flatpak">joklaps/GPXSee-flatpak</a>).
+    These builds are not affiliated with or endorsed by the upstream GPXSee project,
+    and are not published on Flathub &mdash; they are single-file <code>.flatpak</code> bundles you
+    install directly.
+  </p>
+
+  <h2>Requirements</h2>
+  <ol>
+    <li>
+      Flatpak installed on your system &mdash; see the
+      <a href="https://flatpak.org/setup/">official setup instructions</a> for your distribution.
+    </li>
+    <li>
+      The Flathub remote added, since the bundle depends on the KDE runtime hosted there:
+      <pre><code>flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</code></pre>
+    </li>
+  </ol>
+
+  <h2>Installing a downloaded bundle</h2>
+  <p>Download the <code>.flatpak</code> file for your architecture from the table below, then run:</p>
+  <pre><code>flatpak install --user ./gpxsee_x86_64_v16.11.flatpak</code></pre>
+  <p>Once installed, launch it with:</p>
+  <pre><code>flatpak run org.gpxsee.GPXSee</code></pre>
+
+  <div class="note">
+    <p>
+      <strong>Updating:</strong> these bundles are plain files, not served from a Flatpak
+      remote, so <code>flatpak update</code> won't pick up new versions. To upgrade,
+      download the newer bundle and install it again with the same command above &mdash;
+      it will replace the existing installation.
+    </p>
+  </div>
+
+  <h2>Downloads</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Version</th>
+        <th>Architecture</th>
+        <th>File</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>16.11</td>
+        <td>x86_64</td>
+        <td><code>gpxsee_x86_64_v16.11.flatpak</code></td>
+        <td>
+          <a class="btn" href="https://raw.githubusercontent.com/joklaps/GPXSee-flatpak/main/dist/builds/x86_64/gpxsee_x86_64_v16.11.flatpak">
+            Download
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    Build manifest and packaging scripts: <a href="https://github.com/joklaps/GPXSee-flatpak">github.com/joklaps/GPXSee-flatpak</a>.
+    GPXSee itself is developed upstream at <a href="https://github.com/tumic0/GPXSee">github.com/tumic0/GPXSee</a>.
+  </footer>
+
+</main>
+</body>
+</html>
