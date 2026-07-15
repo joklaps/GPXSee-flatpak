@@ -39,38 +39,48 @@ diverged enough to make the diff fail cleanly — check `gpxsee-appdata.patch`
 after regenerating it if upstream's file structure changed significantly.
 
 
+
+
 ## Docs
+Info below is just for my own reference &amp; examples.
 
 https://docs.flatpak.org/en/latest/building-introduction.html#flatpak-builder
+
 https://docs.flathub.org/docs/for-app-authors/submission#build-and-install
 
 
-## Metainfo patch
+### Metainfo patch
 
 Upstream example: https://github.com/tumic0/GPXSee/blob/master/pkg/linux/gpxsee.appdata.xml
+
 Flatpak: assets/metainfo/com.github.tumic0.GPXSee.metainfo.xml
 
 
-## Prepare 
+### Prepare 
 
+```
 flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub --user org.flatpak.Builder
+```
 
+### Build
 
-## Build
-
+```
 flatpak run --command=flathub-build org.flatpak.Builder --force-clean --user --install-deps-from=flathub --repo=repo --install org.gpxsee.GPXSee.yml
+```
 
+### Verify & Install
 
-## Verify & Install
-
+```
 flatpak run --command=flathub-build org.flatpak.Builder --install org.gpxsee.GPXSee.yml
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder manifest org.gpxsee.GPXSee.yml
 flatpak run --command=flatpak-builder-lint org.flatpak.Builder repo repo
+```
 
+### Single file bundle
 
-## Single file bundle
-
+```
 flatpak build-bundle repo dist/gpxsee_x86_64_v16.11.flatpak org.gpxsee.GPXSee --runtime-repo=https://dl.flathub.org/repo/flathub.flatpakrepo
 
 flatpak install dist/gpxsee_x86_64_v16.11.flatpak
+```
