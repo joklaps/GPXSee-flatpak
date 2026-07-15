@@ -46,6 +46,19 @@
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.4rem;
   }
+  details {
+    margin-top: 2.5rem;
+  }
+  summary {
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  details[open] summary {
+    margin-bottom: 0.75rem;
+  }
   p { max-width: none; }
   code, pre {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -133,16 +146,18 @@
     </div>
   </p>
 
-  <h2>Why?</h2>
-  <p>
-  I'm primarily a Linux user and tend to do a lot of distro hopping. A while ago, I standardized on Flatpak as my preferred way of managing applications. I keep a list of the software I use and automate its installation, so every fresh Linux installation gives me the same set of applications regardless of the distribution. It also means I don't have to search through distribution-specific package managers.
-  </p>
-  <p>
-  GPXSee was the one application missing from Flathub for me. I tried to get it accepted as a community contribution, but the effort was unsuccessful, as documented in this PR: <a href="https://github.com/flathub/flathub/pull/9307">https://github.com/flathub/flathub/pull/9307</a>.
-  </p>
-  <p>
-  I was disappointed that the submission wasn't accepted, as I believe it met the stated criteria. I had expected a more constructive review process. In any case, I still wanted to include GPXSee in my Flatpak setup, so I now maintain and build the package myself in this GitHub repository.
-  </p>
+  <details>
+    <summary>Why?</summary>
+    <p>
+    I'm primarily a Linux user and tend to do a lot of distro hopping. A while ago, I standardized on Flatpak as my preferred way of managing applications. I keep a list of the software I use and automate its installation, so every fresh Linux installation gives me the same set of applications regardless of the distribution. It also means I don't have to search through distribution-specific package managers.
+    </p>
+    <p>
+    GPXSee was the one application missing from Flathub for me. I tried to get it accepted as a community contribution, but the effort was unsuccessful, as documented in this PR: <a href="https://github.com/flathub/flathub/pull/9307">https://github.com/flathub/flathub/pull/9307</a>.
+    </p>
+    <p>
+    I was disappointed that the submission wasn't accepted, as I believe it met the stated criteria. I had expected a more constructive review process. In any case, I still wanted to include GPXSee in my Flatpak setup, so I now maintain and build the package myself in this GitHub repository.
+    </p>
+  </details>
 
   <h2>Requirements</h2>
   <ol>
@@ -163,7 +178,7 @@
 
   <div class="note">
     <p>
-      <strong>Updating:</strong> these bundles are plain files, not served from a Flatpak remote, so <code>flatpak update</code> won't pick up new versions. To upgrade, download the newer bundle and install it again with the same command above. It will replace the existing installation.
+      <strong>About updating your installed version:</strong> these bundles are plain files, not served from a Flatpak remote, so <code>flatpak update</code> won't pick up new versions. To upgrade, download the newer bundle and install it again with the same command above. It will replace the existing installation.
     </p>
   </div>
 
