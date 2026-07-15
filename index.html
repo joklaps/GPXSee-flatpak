@@ -6,7 +6,7 @@
 <title>GPXSee Flatpak Downloads</title>
 <style>
   :root {
-    color-scheme: light dark;
+    color-scheme: light;
     --bg: #ffffff;
     --fg: #1a1a1a;
     --muted: #5a5a5a;
@@ -15,18 +15,8 @@
     --code-bg: #eef0f2;
     --accent: #2f6f4f;
     --accent-fg: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14161a;
-      --fg: #e8e8e8;
-      --muted: #a3a3a3;
-      --border: #33363c;
-      --card-bg: #1d2024;
-      --code-bg: #202327;
-      --accent: #5fbf8f;
-      --accent-fg: #0e1a14;
-    }
+    --note-bg: #fff6cc;
+    --note-border: #e6cf70;
   }
   * { box-sizing: border-box; }
   body {
@@ -56,7 +46,7 @@
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.4rem;
   }
-  p { max-width: 65ch; }
+  p { max-width: none; }
   code, pre {
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     font-size: 0.9em;
@@ -108,8 +98,8 @@
   }
   .btn:hover { opacity: 0.88; }
   .note {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: var(--note-bg);
+    border: 1px solid var(--note-border);
     border-radius: 8px;
     padding: 0.9rem 1.1rem;
     margin-top: 1rem;
@@ -130,22 +120,24 @@
 <main>
 
   <h1>GPXSee Flatpak</h1>
-  <p class="tagline">Unofficial Flatpak bundles for <a href="https://github.com/tumic0/GPXSee">GPXSee</a>, the GPS log file viewer and analyzer.</p>
+  <p class="tagline">Unofficial Flatpak bundles for <a href="https://github.com/tumic0/GPXSee">GPXSee</a>. The GPS log file viewer and analyzer with support for GPX, TCX, KML, FIT, IGC, NMEA, SLF, SML, LOC, GPI, GeoJSON and OziExplorer files.</p>
 
   <h2>What is this?</h2>
   <p>
-    This page distributes standalone Flatpak bundles of GPXSee, built from the manifest in
-    this repository (<a href="https://github.com/joklaps/GPXSee-flatpak">joklaps/GPXSee-flatpak</a>).
-    These builds are not affiliated with or endorsed by the upstream GPXSee project,
-    and are not published on Flathub &mdash; they are single-file <code>.flatpak</code> bundles you
-    install directly.
+    This page distributes standalone Flatpak bundles of GPXSee, built from the manifest in this repository (<a href="https://github.com/joklaps/GPXSee-flatpak">joklaps/GPXSee-flatpak</a>).
+    These builds are a community effort and are <strong>not</strong> affiliated with or endorsed by the upstream GPXSee project, and are not published on Flathub. They are single-file <code>.flatpak</code> bundles you install directly.
+    <div class="note">
+        <p>
+        Please do <strong>not</strong> contact the upstream project for support regarding a flatpak install.
+        </p>
+    </div>
+
   </p>
 
   <h2>Requirements</h2>
   <ol>
     <li>
-      Flatpak installed on your system &mdash; see the
-      <a href="https://flatpak.org/setup/">official setup instructions</a> for your distribution.
+      Flatpak installed on your system. See the <a href="https://flatpak.org/setup/">official setup instructions</a> for your distribution.
     </li>
     <li>
       The Flathub remote added, since the bundle depends on the KDE runtime hosted there:
@@ -161,10 +153,7 @@
 
   <div class="note">
     <p>
-      <strong>Updating:</strong> these bundles are plain files, not served from a Flatpak
-      remote, so <code>flatpak update</code> won't pick up new versions. To upgrade,
-      download the newer bundle and install it again with the same command above &mdash;
-      it will replace the existing installation.
+      <strong>Updating:</strong> these bundles are plain files, not served from a Flatpak remote, so <code>flatpak update</code> won't pick up new versions. To upgrade, download the newer bundle and install it again with the same command above. It will replace the existing installation.
     </p>
   </div>
 
