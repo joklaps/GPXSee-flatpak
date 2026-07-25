@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <component type="desktop-application">
-	<id>org.gpxsee.GPXSee</id>
+	<id>gpxsee.desktop</id>
 	<developer id="io.github.tumic0">
 		<name>Martin Tůma</name>
 	</developer>
@@ -10,7 +10,6 @@
 	<name>GPXSee</name>
 	<summary>GPS log file viewer and analyzer</summary>
 	<description>
-		<p>**This is a community-built package of GPXSee distributed via https://joklaps.github.io/GPXSee-flatpak/. It is not an official package and is not supported by the author of GPXSee. Please do not contact the GPXSee author for support regarding this Flatpak package.**</p>
 		<p>GPXSee is a GPS log file viewer and analyzer that supports all common
 		GPS log file formats.</p>
 
