@@ -1,5 +1,5 @@
---- GPXSee-16.13/pkg/linux/gpxsee.appdata.xml
-+++ GPXSee-16.13/pkg/linux/gpxsee.appdata.xml
+--- GPXSee-16.14/pkg/linux/gpxsee.appdata.xml
++++ GPXSee-16.14/pkg/linux/gpxsee.appdata.xml
 @@ -1,6 +1,9 @@
 -<?xml version="1.0" encoding="UTF-8"?>
 -<component type="desktop">
@@ -12,7 +12,7 @@
  	<metadata_license>MIT</metadata_license>
  	<project_license>GPL-3.0</project_license>
  
-@@ -43,88 +46,72 @@
+@@ -43,88 +46,85 @@
  	<screenshots>
  		<screenshot type="default">
  			<image>https://www.gpxsee.org/gallery/linux.png</image>
@@ -120,6 +120,19 @@
 +	<content_rating type="oars-1.1"/>
 +
 +	<releases>
++	<release version="16.14" date="2026-08-28">
++    		<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.14</url>
++    		<description>
++    		<p>Changes</p>
++    			<ul>
++    			<li>Fixed missing patterns in Mapsforge map style (broken in 16.13).</li>
++    			<li>Fixed crashes in ENC maps/atlases.</li>
++                <li>Fixed minor Mapsforge style rendering issues.</li>
++                <li>Improved Windows installer</li>
++                <li>Minor IMG maps performance improvements</li>
++    			</ul>
++    		</description>
++    	</release>
 +	    <release version="16.13" date="2026-08-19">
 +    		<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.13</url>
 +    		<description>
