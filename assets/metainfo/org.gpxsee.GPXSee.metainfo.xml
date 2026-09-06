@@ -81,6 +81,28 @@
 	<content_rating type="oars-1.1"/>
 
 	<releases>
+	    <release version="16.13" date="2026-08-19">
+    		<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.13</url>
+    		<description>
+    		<p>Changes</p>
+    			<ul>
+    			<li>Added warning about broken GPXSee flatpaks from flathub.org.</li>
+    			<li>Fixed Mapsforge themes resource paths handling.</li>
+                <li>Polished the settings dialogue on macOS.</li>
+    			</ul>
+    		</description>
+    	</release>
+    	<release version="16.12" date="2026-08-14">
+    		<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.12</url>
+    		<description>
+    		<p>Changes</p>
+    			<ul>
+    			<li>Fixed multiple TwoNav RMaps loading issues.</li>
+    			<li>Fixed multiple IMG maps loading and rendering issues.</li>
+                <li>Multiple minor bug fixes and improvements.</li>
+    			</ul>
+    		</description>
+    	</release>
 		<release version="16.11" date="2026-07-04">
 			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.11</url>
 			<description>
