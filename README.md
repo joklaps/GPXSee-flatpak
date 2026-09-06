@@ -1,5 +1,9 @@
 # GPXSee-flatpak
-Files needed to build the Flatpak package of GPXSee
+Files needed to build the Flatpak package of GPXSee.
+
+I originally used this repository to research, test, and develop a Flatpak package for GPXSee. In July 2026, my pull request to add GPXSee to Flathub was accepted, making GPXSee an official application on Flathub.
+
+For the latest information and installation instructions, please visit: https://flathub.org/apps/org.gpxsee.GPXSee
 
 ## Releasing a new GPXSee version
 
