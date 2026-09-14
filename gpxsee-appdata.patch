@@ -1,5 +1,5 @@
---- GPXSee-16.14/pkg/linux/gpxsee.appdata.xml
-+++ GPXSee-16.14/pkg/linux/gpxsee.appdata.xml
+--- GPXSee-16.15/pkg/linux/gpxsee.appdata.xml
++++ GPXSee-16.15/pkg/linux/gpxsee.appdata.xml
 @@ -1,6 +1,9 @@
 -<?xml version="1.0" encoding="UTF-8"?>
 -<component type="desktop">
@@ -12,7 +12,7 @@
  	<metadata_license>MIT</metadata_license>
  	<project_license>GPL-3.0</project_license>
  
-@@ -43,88 +46,85 @@
+@@ -43,88 +46,96 @@
  	<screenshots>
  		<screenshot type="default">
  			<image>https://www.gpxsee.org/gallery/linux.png</image>
@@ -120,48 +120,59 @@
 +	<content_rating type="oars-1.1"/>
 +
 +	<releases>
-+	<release version="16.14" date="2026-08-28">
-+    		<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.14</url>
-+    		<description>
-+    		<p>Changes</p>
-+    			<ul>
-+    			<li>Fixed missing patterns in Mapsforge map style (broken in 16.13).</li>
-+    			<li>Fixed crashes in ENC maps/atlases.</li>
-+                <li>Fixed minor Mapsforge style rendering issues.</li>
-+                <li>Improved Windows installer</li>
-+                <li>Minor IMG maps performance improvements</li>
-+    			</ul>
-+    		</description>
-+    	</release>
-+	    <release version="16.13" date="2026-08-19">
-+    		<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.13</url>
-+    		<description>
-+    		<p>Changes</p>
-+    			<ul>
-+    			<li>Added warning about broken GPXSee flatpaks from flathub.org.</li>
-+    			<li>Fixed Mapsforge themes resource paths handling.</li>
-+                <li>Polished the settings dialogue on macOS.</li>
-+    			</ul>
-+    		</description>
-+    	</release>
-+    	<release version="16.12" date="2026-08-14">
-+    		<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.12</url>
-+    		<description>
-+    		<p>Changes</p>
-+    			<ul>
-+    			<li>Fixed multiple TwoNav RMaps loading issues.</li>
-+    			<li>Fixed multiple IMG maps loading and rendering issues.</li>
-+                <li>Multiple minor bug fixes and improvements.</li>
-+    			</ul>
-+    		</description>
-+    	</release>
++		<release version="16.15" date="2026-09-12">
++			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.15</url>
++			<description>
++			<p>Changes</p>
++				<ul>
++					<li>Improved Mapsforge maps performance.</li>
++					<li>Improved Mapsforge maps render theme.</li>
++					<li>Improved hillshading performance on all vector maps (Mapsforge, IMG, MVT).</li>
++				</ul>
++			</description>
++		</release>
++		<release version="16.14" date="2026-08-28">
++			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.14</url>
++			<description>
++			<p>Changes</p>
++				<ul>
++					<li>Fixed missing patterns in Mapsforge map style (broken in 16.13).</li>
++					<li>Fixed crashes in ENC maps/atlases.</li>
++					<li>Fixed minor Mapsforge style rendering issues.</li>
++					<li>Improved Windows installer</li>
++					<li>Minor IMG maps performance improvements</li>
++				</ul>
++			</description>
++		</release>
++		<release version="16.13" date="2026-08-19">
++			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.13</url>
++			<description>
++			<p>Changes</p>
++				<ul>
++					<li>Added warning about broken GPXSee flatpaks from flathub.org.</li>
++					<li>Fixed Mapsforge themes resource paths handling.</li>
++					<li>Polished the settings dialogue on macOS.</li>
++				</ul>
++			</description>
++		</release>
++		<release version="16.12" date="2026-08-14">
++			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.12</url>
++			<description>
++			<p>Changes</p>
++				<ul>
++					<li>Fixed multiple TwoNav RMaps loading issues.</li>
++					<li>Fixed multiple IMG maps loading and rendering issues.</li>
++					<li>Multiple minor bug fixes and improvements.</li>
++				</ul>
++			</description>
++		</release>
 +		<release version="16.11" date="2026-07-04">
 +			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.11</url>
 +			<description>
 +			<p>Changes</p>
 +				<ul>
-+				<li>Removed Qt-private dependency.</li>
-+				<li>Improved KMZ files loading.</li>
++					<li>Removed Qt-private dependency.</li>
++					<li>Improved KMZ files loading.</li>
 +				</ul>
 +			</description>
 +		</release>
