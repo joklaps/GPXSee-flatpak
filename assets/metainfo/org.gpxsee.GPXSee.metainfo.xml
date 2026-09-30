@@ -81,6 +81,17 @@
 	<content_rating type="oars-1.1"/>
 
 	<releases>
+		<release version="16.16" date="2026-09-26">
+			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.16</url>
+			<description>
+			<p>Changes</p>
+				<ul>
+					<li>Added IMG maps deatil level configuration.</li>
+					<li>macOS settings UI/UX cleanup.</li>
+					<li>Windows versions are now built using MSVC 2026.</li>
+				</ul>
+			</description>
+		</release>
 		<release version="16.15" date="2026-09-12">
 			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.15</url>
 			<description>

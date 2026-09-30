@@ -21,7 +21,7 @@ modules:
       - lrelease gpxsee.pro
     sources:
       - type: archive
-        url: https://github.com/tumic0/GPXSee/archive/refs/tags/16.15.tar.gz
-        sha256: 2456cbfa127b12bb971760175420aba6369d771f3a586558501d261964ccf333
+        url: https://github.com/tumic0/GPXSee/archive/refs/tags/16.16.tar.gz
+        sha256: e7955c23df5aa733648ba6094501f294af0e46c9d3f845adb20a2459447d5070
       - type: patch
         path: gpxsee-appdata.patch

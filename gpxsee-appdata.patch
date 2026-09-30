@@ -1,5 +1,5 @@
---- GPXSee-16.15/pkg/linux/gpxsee.appdata.xml
-+++ GPXSee-16.15/pkg/linux/gpxsee.appdata.xml
+--- GPXSee-16.16/pkg/linux/gpxsee.appdata.xml
++++ GPXSee-16.16/pkg/linux/gpxsee.appdata.xml
 @@ -1,6 +1,9 @@
 -<?xml version="1.0" encoding="UTF-8"?>
 -<component type="desktop">
@@ -12,7 +12,7 @@
  	<metadata_license>MIT</metadata_license>
  	<project_license>GPL-3.0</project_license>
  
-@@ -43,88 +46,96 @@
+@@ -43,88 +46,107 @@
  	<screenshots>
  		<screenshot type="default">
  			<image>https://www.gpxsee.org/gallery/linux.png</image>
@@ -120,6 +120,17 @@
 +	<content_rating type="oars-1.1"/>
 +
 +	<releases>
++		<release version="16.16" date="2026-09-26">
++			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.16</url>
++			<description>
++			<p>Changes</p>
++				<ul>
++					<li>Added IMG maps deatil level configuration.</li>
++					<li>macOS settings UI/UX cleanup.</li>
++					<li>Windows versions are now built using MSVC 2026.</li>
++				</ul>
++			</description>
++		</release>
 +		<release version="16.15" date="2026-09-12">
 +			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.15</url>
 +			<description>
