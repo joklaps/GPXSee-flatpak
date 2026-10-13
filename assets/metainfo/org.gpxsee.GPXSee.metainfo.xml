@@ -81,6 +81,18 @@
 	<content_rating type="oars-1.1"/>
 
 	<releases>
+		<release version="16.17" date="2026-10-10">
+			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.17</url>
+			<description>
+			<p>Changes</p>
+				<ul>
+					<li>Added playback of waypoint videos.</li>
+					<li>Added symbols to MP4/JPEG waypoints.</li>
+					<li>Fixed multiple graphs drawing issues.</li>
+					<li>Only permissions/features that are really needed are now declared in the Android manifest.</li>
+				</ul>
+			</description>
+		</release>
 		<release version="16.16" date="2026-09-26">
 			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.16</url>
 			<description>

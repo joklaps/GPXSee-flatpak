@@ -1,5 +1,5 @@
---- GPXSee-16.16/pkg/linux/gpxsee.appdata.xml
-+++ GPXSee-16.16/pkg/linux/gpxsee.appdata.xml
+--- GPXSee-16.17/pkg/linux/gpxsee.appdata.xml
++++ GPXSee-16.17/pkg/linux/gpxsee.appdata.xml
 @@ -1,6 +1,9 @@
 -<?xml version="1.0" encoding="UTF-8"?>
 -<component type="desktop">
@@ -12,7 +12,7 @@
  	<metadata_license>MIT</metadata_license>
  	<project_license>GPL-3.0</project_license>
  
-@@ -43,88 +46,107 @@
+@@ -43,88 +46,119 @@
  	<screenshots>
  		<screenshot type="default">
  			<image>https://www.gpxsee.org/gallery/linux.png</image>
@@ -120,6 +120,18 @@
 +	<content_rating type="oars-1.1"/>
 +
 +	<releases>
++		<release version="16.17" date="2026-10-10">
++			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.17</url>
++			<description>
++			<p>Changes</p>
++				<ul>
++					<li>Added playback of waypoint videos.</li>
++					<li>Added symbols to MP4/JPEG waypoints.</li>
++					<li>Fixed multiple graphs drawing issues.</li>
++					<li>Only permissions/features that are really needed are now declared in the Android manifest.</li>
++				</ul>
++			</description>
++		</release>
 +		<release version="16.16" date="2026-09-26">
 +			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.16</url>
 +			<description>

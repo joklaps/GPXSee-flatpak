@@ -88,3 +88,66 @@ flatpak build-bundle repo dist/gpxsee_x86_64_v16.11.flatpak org.gpxsee.GPXSee --
 
 flatpak install dist/gpxsee_x86_64_v16.11.flatpak
 ```
+
+### Repo build
+
+#### 1. create repo
+```
+mkdir -p flatpak/repo
+ostree init --repo=flatpak/repo --mode=archive-z2
+```
+
+#### 2. create the flatpak
+```
+flatpak run --command=flathub-build org.flatpak.Builder org.gpxsee.GPXSee.yml
+```
+
+#### 3. export the build
+```
+flatpak build-export flatpak/repo builddir
+```
+
+#### 4. sign the package
+Copy public key where users can download it
+
+```
+gpg --full-generate-key
+gpg --list-secret-keys
+gpg --export --armor DD38697B8F277CC5435CBE92C18C058FFD585960 > public.asc
+flatpak build-update-repo --gpg-sign=DD38697B8F277CC5435CBE92C18C058FFD585960 flatpak/repo
+```
+
+#### 5. add the remote
+```
+location /flatpak/ {
+    alias /srv/flatpak/repo/;
+    autoindex on;
+}
+
+flatpak remote-add --gpg-import=public.asc gpxsee-repo https://gpxseerepo.klaps.me/flatpak
+```
+
+#### 6. publish updates
+Every time you build a new version:
+```
+flatpak build-export flatpak/repo builddir
+
+flatpak build-update-repo --gpg-sign=<KEYID> flatpak/repo
+```
+
+#### 7. Optionally gpxseerepo.flatpakrepo
+```
+[Flatpak Repo]
+Title=GPXSee Flatpak Repository
+Url=https://gpxseerepo.klaps.me/flatpak
+GPGKey=<base64 encoded public key>
+Homepage=https://gpxseerepo.klaps.me
+Comment=Flatpak packages
+```
+
+flatpak remote-add --from gpxseerepo.flatpakrepo
+
+
+myheroics.com
+tinyheroics.com
+everydayheroics.com
