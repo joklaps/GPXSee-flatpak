@@ -81,6 +81,26 @@
 	<content_rating type="oars-1.1"/>
 
 	<releases>
+		<release version="16.19" date="2026-10-26">
+			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.19</url>
+			<description>
+			<p>Changes</p>
+				<ul>
+					<li>Fixed Android menu (and navigation) disappearing after a switch to/from OpenGL.</li>
+				</ul>
+			</description>
+		</release>
+		<release version="16.18" date="2026-10-25">
+			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.18</url>
+			<description>
+			<p>Changes</p>
+				<ul>
+					<li>Directory listing now takes a geologically-short time on Android.</li>
+					<li>Fixed video playback on Android.</li>
+					<li>Mapsforge map style tweaking.</li>
+				</ul>
+			</description>
+		</release>
 		<release version="16.17" date="2026-10-10">
 			<url type="details">https://github.com/tumic0/GPXSee/releases/tag/16.17</url>
 			<description>
